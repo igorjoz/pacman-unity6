@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
-        
+        pellet.gameObject.SetActive(false);
     }
 
 }
