@@ -304,6 +304,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278868600}
   m_CullTransparentMesh: 1
+--- !u!1001 &290543616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1402060476367472432, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905490, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818017483259905493, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
+      propertyPath: m_Name
+      value: Ghost_Blinky
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6af2c72cce8af724fbdb5eb6a5612472, type: 3}
 --- !u!1 &468613728
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,11 +456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db479791ffe5f7943b26b5ee18e47290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pacman: {fileID: 0}
+  pacman: {fileID: 856251166}
   pellets: {fileID: 1910537628}
   gameOverText: {fileID: 1133529214}
   scoreText: {fileID: 1945791160}
   livesText: {fileID: 278868602}
+  ghosts: []
 --- !u!1 &512613666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,9 +1488,10 @@ GameObject:
   - component: {fileID: 856251160}
   - component: {fileID: 856251165}
   - component: {fileID: 856251166}
+  - component: {fileID: 856251167}
   m_Layer: 6
   m_Name: Pacman
-  m_TagString: Untagged
+  m_TagString: Pacman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,7 +1669,6 @@ MonoBehaviour:
   speed: 8
   initialDirection: {x: 1, y: 0}
   obstacleLayer:
-    serializedVersion: 2
     m_Bits: 512
 --- !u!114 &856251166
 MonoBehaviour:
@@ -1620,6 +1682,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8789c38bbff2124e9506a025fecbe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pacman
+--- !u!114 &856251167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856251159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30981cdc55071b44c89e164d89521891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  speed: 8
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &918157308
 GameObject:
   m_ObjectHideFlags: 0
@@ -10519,3 +10598,4 @@ SceneRoots:
   - {fileID: 2065495719}
   - {fileID: 469897152}
   - {fileID: 856251164}
+  - {fileID: 290543616}
